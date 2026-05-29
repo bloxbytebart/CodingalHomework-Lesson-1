@@ -1,0 +1,18 @@
+import os
+
+os.chdir(input("Enter the directory path: "))
+file = open(input("Enter the file name: "), "r")
+print(file.read())
+file.close()
+
+file = open(input("Enter the file name: "), "a+")
+file.write(input("Enter the text to append: "))
+file.seek(0)
+print(file.read())
+file.close()
+
+file = open(input("Enter the file name: "), "w+")
+file.write(input("Enter the text to overwrite: "))
+file.seek(0)
+print(file.read())
+file.close()
